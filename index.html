@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura Bíblica</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <div class="row bg-dark bg-gradient">
+            <div class="d-flex justify-content-center">
+                <h2 class="text-white">IBPAZ Campos</h2>
+            </div>
+            <div class="d-flex justify-content-center">
+                <h4 class="text-white" >Plano de Leitura Bíblica</h4>
+            </div>
+        </div>
+    </header>
+
+    <!-- conteudo -->
+
+    <!-- boas vindas -->
+    <div class="p-2" id="welcome">
+        <span id="welcome-message">Bem-vindo!</span>
+        <div id="username-input-container"> 
+          <input class="form-control" type="text" id="username-input" placeholder="Digite seu nome">
+          <button class="btn btn-primary" id="save-username"><i class="bi bi-floppy"></i></button>
+        </div>
+    </div>
+
+      <!-- Acompanhamento -->
+      <div class="row m-1">
+        <div class="col-6 border border-primary text-center m-0" id="daily-summary">
+            <h5>Leitura do dia</h5>
+            <span id="summary-list">
+                <!-- O resumo será preenchido pelo JavaScript -->
+            </span>
+        </div>
+        <div class="col-6 border border-primary text-center m-0">
+            <h5>Desempenho do mês</h5>
+            <div id="unread-summary"></div>
+        </div>
+    </div>
+
+    <!-- Progresso -->
+    <div class="container text-center">
+        <div class="row align-items-center m-1">
+            <div class="col-8 align-items-center" id="progress-container">
+                <div class="" id="progress-bar"><div id="progress-fill"></div></div> 
+            </div>
+            <div class="col-4 text-start">
+                <span id="progress-text">0% lido</span>
+            </div>
+        </div>
+    </div>
+
+        <!-- Filtro -->
+    <div id="filter-container">
+        <div class="form-control bg-dark-subtle">
+            <!-- <label for="month-filter">Filtrar por mês:</label> -->
+            <select class="form-select" id="month-filter">
+                <option value="">Todos os meses</option>
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- tabela -->
+    <div class="bg-dark-subtle">
+        <div class="">
+            <table class="table bordered border-defaut table-striped" id="reading-table" border="1">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Mês</th>
+                        <th>Dia</th>
+                        <th>Livro Bíblico</th>
+                        <th>Capítulo</th>
+                        <th>Lido?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas da tabela serão geradas pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- backup -->
+    <div class="row text-center">
+        <div class="d-flex justify-content-center">
+            <div class="col">
+                <!-- <button class=" btn btn-info" id="export-button">Exportar Progresso</button> -->
+                <button class=" btn btn-info" id="export-button"><i class="bi bi-arrow-down"></i> Exportar Progresso</button>
+                <!-- <button class="btn btn-info" id="import-button">Importar Progresso</button> Novo botão -->
+                <button class="btn btn-info" id="import-button"><i class="bi bi-arrow-up"></i> Importar Progresso</button> <!-- Novo botão -->
+                
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <footer>
+        
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
