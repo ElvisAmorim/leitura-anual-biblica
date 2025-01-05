@@ -246,7 +246,7 @@
     {"id":"ago-30-Jeremias", "mes":"Agosto", "dia":30, "livro_biblico":"Jeremias", "capitulo":"46-48", "lido":false},
     {"id":"ago-31-Jeremias", "mes":"Agosto", "dia":31, "livro_biblico":"Jeremias", "capitulo":"49-50", "lido":false},
     {"id":"set-1-Jeremias", "mes":"Setembro", "dia":1, "livro_biblico":"Jeremias", "capitulo":"51-52", "lido":false},
-    {"id":"set-2-Lametações", "mes":"Setembro", "dia":2, "livro_biblico":"Lametações", "capitulo":"1-5", "lido":false},
+    {"id":"set-2-Lamentações", "mes":"Setembro", "dia":2, "livro_biblico":"Lamentações", "capitulo":"1-5", "lido":false},
     {"id":"set-3-Ezequiel", "mes":"Setembro", "dia":3, "livro_biblico":"Ezequiel", "capitulo":"1-3", "lido":false},
     {"id":"set-4-Ezequiel", "mes":"Setembro", "dia":4, "livro_biblico":"Ezequiel", "capitulo":"4-6", "lido":false},
     {"id":"set-5-Ezequiel", "mes":"Setembro", "dia":5, "livro_biblico":"Ezequiel", "capitulo":"7-9", "lido":false},
