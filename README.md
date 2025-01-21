@@ -30,7 +30,7 @@ Essa aplicação foi baseada no plano de leitura de uma congregação para evita
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://raw.githubusercontent.com/ElvisAmorim/leitura-anual-biblica/refs/heads/main/print%20plano%20leitura%20biblica.png)
 
 
 ## Funcionalidades
