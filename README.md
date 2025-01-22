@@ -33,7 +33,7 @@ Essa aplicação foi baseada no plano de leitura de uma congregação para evita
 - Armazenamento em local storage do navegador do usuário
 
 ## Status
-> [ projeto esta finalizado]
+> projeto esta finalizado
 
 
 ## Pré-requisitos
