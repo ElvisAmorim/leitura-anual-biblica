@@ -15,16 +15,6 @@ Aplicação web baseado no plano de leitura bíblica.
 
 - [Instalação](#instalação)
 
-- [Como Usar](#como-usar)
-
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-
-- [Contribuindo](#contribuindo)
-
-- [Licença](#licença)
-
-- [Contato](#contato)
-
 ## Sobre
 Essa aplicação foi baseada no plano de leitura de uma congregação para evitar impressão.
 
