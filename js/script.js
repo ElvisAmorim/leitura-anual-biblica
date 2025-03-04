@@ -288,6 +288,63 @@ document.addEventListener("DOMContentLoaded", loadDailySummary);
 
 ///////////////////
 // Dias nao lidos
+// function showUnreadPreviousDays() {
+//     // Obter a data atual
+//     const today = new Date();
+//     const todayDay = today.getDate(); // Dia atual
+//     const todayMonthIndex = today.getMonth(); // Índice do mês atual (0 = Janeiro, 1 = Fevereiro, etc.)
+
+//     // Mapear os nomes dos meses para seus índices
+//     const monthMap = {
+//         "Janeiro": 0,
+//         "Fevereiro": 1,
+//         "Março": 2,
+//         "Abril": 3,
+//         "Maio": 4,
+//         "Junho": 5,
+//         "Julho": 6,
+//         "Agosto": 7,
+//         "Setembro": 8,
+//         "Outubro": 9,
+//         "Novembro": 10,
+//         "Dezembro": 11
+//     };
+
+//     // Carregar os dados da tabela
+//     fetch("data/data.json")
+//         .then(response => response.json())
+//         .then(tableData => {
+//             // Carregar o status de leitura do LocalStorage
+//             const savedStatus = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+//             // Filtrar os dias anteriores a hoje que ainda não foram lidos
+//             const unreadPreviousDays = tableData.filter(entry => {
+//                 const entryMonthIndex = monthMap[entry.mes]; // Índice do mês do registro
+//                 const entryDay = entry.dia; // Dia do registro
+
+//                 // Verifica se o registro é anterior à data atual
+//                 const isBeforeToday = 
+//                     (entryMonthIndex < todayMonthIndex) || 
+//                     (entryMonthIndex === todayMonthIndex && entryDay < todayDay);
+
+//                 // Retornar apenas entradas não lidas
+//                 return isBeforeToday && !savedStatus[entry.id];
+//             });
+
+//             // Exibe a quantidade de dias não lidos
+//             const unreadCount = unreadPreviousDays.length;
+
+//             // Atualizar o texto no frontend
+//             const summaryElement = document.querySelector("#unread-summary");
+//             if (unreadCount === 0) {
+//                 summaryElement.textContent = "Leitura em dia!";
+//             } else {
+//                 summaryElement.textContent = `${unreadCount} dia(s) em atraso.`;
+//             }
+//         })
+//         .catch(error => console.error("Erro ao carregar os dados:", error));
+// }
+
 function showUnreadPreviousDays() {
     // Obter a data atual
     const today = new Date();
@@ -333,17 +390,23 @@ function showUnreadPreviousDays() {
 
             // Exibe a quantidade de dias não lidos
             const unreadCount = unreadPreviousDays.length;
+            const totalDaysExpected = todayDay; // Quantidade de dias esperados até hoje no mês
 
             // Atualizar o texto no frontend
             const summaryElement = document.querySelector("#unread-summary");
             if (unreadCount === 0) {
-                summaryElement.textContent = "Leitura em dia!";
+                if (unreadPreviousDays.length > totalDaysExpected) {
+                    summaryElement.textContent = "Ótimo! Você está adiantado!";
+                } else {
+                    summaryElement.textContent = "Leitura em dia!";
+                }
             } else {
                 summaryElement.textContent = `${unreadCount} dia(s) em atraso.`;
             }
         })
         .catch(error => console.error("Erro ao carregar os dados:", error));
 }
+
 
 // Atualiza o estado de leitura no LocalStorage
 function updateReadingStatus(id, isRead) {
